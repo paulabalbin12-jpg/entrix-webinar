@@ -19,6 +19,7 @@
   <script>document.documentElement.classList.add("js");</script>
   <script src="js/content.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/clock-field.js" defer></script>
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -236,7 +237,7 @@
     </section>
 
     <!-- 5 · What you'll learn -->
-    <section class="section section--brand" id="topics">
+    <section class="section section--brand" id="topics" data-clock-field>
       <div class="container">
         <div class="section-head topics__head">
           <p class="eyebrow" data-i18n="learn.eyebrow">What you'll learn</p>
@@ -355,7 +356,7 @@
     <!-- 8 · Register for free + 9 · Contacto -->
     <section class="section" id="join">
       <div class="container">
-        <div class="cta-module section--brand" data-reveal>
+        <div class="cta-module section--brand" data-reveal data-clock-field>
           <div class="cta-module__text">
             <p class="eyebrow" data-i18n="form.eyebrow">Free registration</p>
             <h2 data-i18n="cta.title">Look beyond the headline number</h2>
@@ -382,7 +383,7 @@
   </main>
 
   <!-- 10 · Footer -->
-  <footer class="site-footer section--dark">
+  <footer class="site-footer section--dark" data-clock-field>
     <div class="container">
       <div class="site-footer__top">
         <a class="site-footer__logo" href="https://www.entrixenergy.com/en" aria-label="Entrix">

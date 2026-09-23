@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5 { color: var(--text-brand); overflow-wrap: break-word; }
 .section--brand :is(h1, h2, h3, h4, h5),
 .section--dark :is(h1, h2, h3, h4, h5) { color: var(--text-inverse); }
 
+/* Fondo de relojitos de las secciones deep blue (js/clock-field.js): el canvas va detrás del contenido */
+[data-clock-field] { position: relative; isolation: isolate; }
+.clock-field { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; border-radius: inherit; pointer-events: none; }
+
 .skip-link { position: absolute; left: var(--gutter); top: 0; z-index: 100; transform: translateY(-120%); }
 .skip-link:focus { transform: translateY(var(--space-2)); }
 
