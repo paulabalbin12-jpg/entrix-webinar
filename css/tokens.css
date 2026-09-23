@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Entrix Design Tokens
+   Fuente: CSS público de entrixenergy.com (ver ../README.md)
+   ========================================================================== */
+
+/* FK Grotesk es comercial (Florian Karsten Typefaces). Si no hay licencia,
+   usamos Onest como sustituto: superpuesta a FK Grotesk tiene el mismo ancho
+   y proporciones. */
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500&display=swap");
+
+:root {
+  /* ---- Color: marca ---- */
+  --entrix-deep-blue: #16265b;
+  --entrix-dark-blue: #151941;
+  --entrix-sky-blue: #1d54f5;
+  --entrix-energetic-blue: #103297;
+  --entrix-light-blue: #c9d7e9;
+  --entrix-beige: #f1efe9;
+
+  /* ---- Color: neutros ---- */
+  --entrix-black: #161616;
+  --entrix-white: #ffffff;
+  --entrix-offwhite: #fafafa;
+  --entrix-gray: #757575;
+  --entrix-copy: #646464;
+  --entrix-charcoal: #57585d;
+  --entrix-error: #ff0000;
+
+  /* ---- Color: roles semánticos ---- */
+  --color-primary: var(--entrix-sky-blue);
+  --color-primary-hover: var(--entrix-energetic-blue);
+  --color-primary-active: var(--entrix-deep-blue);
+  --surface-default: var(--entrix-white);
+  --surface-alt: var(--entrix-offwhite);
+  --surface-muted: var(--entrix-beige);
+  --surface-soft: var(--entrix-light-blue);
+  --surface-brand: var(--entrix-deep-blue);
+  --surface-brand-dark: var(--entrix-dark-blue);
+  --text-default: var(--entrix-black);
+  --text-brand: var(--entrix-deep-blue);
+  --text-secondary: var(--entrix-copy);
+  --text-inverse: var(--entrix-white);
+  --text-disabled: var(--entrix-gray);
+  --border-subtle: rgb(22 38 91 / 0.15);
+  --focus-ring: var(--entrix-sky-blue);
+
+  /* ---- Tipografía ---- */
+  --font-primary: "FK Grotesk", "Onest", ui-sans-serif, system-ui, sans-serif;
+  /* Decisión de diseño (23 sep): sin fuente mono. Botones, tags, fechas y números
+     usan la fuente principal en mayúsculas con tracking 2px. El token se mantiene
+     para no tocar las clases que lo usan (.mono, .btn, .tag). */
+  --font-mono: var(--font-primary);
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --tracking-mono: 2px;
+
+  /* Escala móvil (se sobreescribe a ≥1024px) */
+  --fs-h1: 35px;   --lh-h1: 1.143;
+  --fs-h2: 30px;   --lh-h2: 1.333;
+  --fs-h3: 25px;   --lh-h3: 1.2;
+  --fs-h4: 20px;   --lh-h4: 1.5;
+  --fs-h5: 20px;   --lh-h5: 1.2;
+  --fs-p-lg: 18px; --lh-p-lg: 1.389;
+  --fs-p: 16px;    --lh-p: 1.563;
+  --fs-p-xs: 14px; --lh-p-xs: 1.429;
+  --fs-nav: 15px;
+  --fs-button: 15px;
+  --fs-button-sm: 12px;
+  --fs-tag: 13px;
+  --fs-eyebrow: 14px;
+
+  /* ---- Espaciado (escala de 5px) ---- */
+  --space-1: 5px;
+  --space-2: 10px;
+  --space-3: 15px;
+  --space-4: 20px;
+  --space-5: 25px;
+  --space-6: 30px;
+  --space-8: 40px;
+  --space-10: 50px;
+  --space-14: 70px;
+  --space-20: 100px;
+
+  /* ---- Layout ---- */
+  --container-wide: 1512px;
+  --container-article: 768px;
+  --gutter: 25px;
+  --section-padding: 50px;
+  --nav-height: 70px;
+
+  /* ---- Radios ---- */
+  --radius-sm: 8px;
+  --radius-md: 15px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* ---- Sombras / efectos ---- */
+  --shadow-nav: 0 0 10px rgb(0 0 0 / 0.15);
+  --shadow-card: 0 4px 20px rgb(0 0 0 / 0.1);
+  --blur-glass: 27px;
+
+  /* ---- Motion ---- */
+  --duration-fast: 200ms;
+  --duration-menu: 300ms;
+  --duration-reveal: 700ms;
+  --ease-standard: ease;
+  --ease-out: ease-out;
+  --ease-lift: cubic-bezier(0.22, 0.8, 0.25, 1);
+}
+
+@media (min-width: 768px) {
+  :root { --gutter: 50px; }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-h1: 75px;   --lh-h1: 1.067;
+    --fs-h2: 55px;   --lh-h2: 1.091;
+    --fs-h3: 40px;   --lh-h3: 1.25;
+    --fs-h4: 30px;   --lh-h4: 1.167;
+    --fs-h5: 25px;   --lh-h5: 1.2;
+    --fs-p-lg: 20px; --lh-p-lg: 1.5;
+    --fs-p: 18px;    --lh-p: 1.389;
+    --fs-p-xs: 16px; --lh-p-xs: 1.563;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-menu: 0ms;
+    --duration-reveal: 0ms;
+  }
+}

@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Entrix Components — requiere ../tokens/tokens.css
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-weight: var(--weight-regular);
+  font-size: var(--fs-p);
+  line-height: var(--lh-p);
+  color: var(--text-default);
+  background: var(--surface-default);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Tipografía ---- */
+h1, .h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: 400; margin: 0; }
+h2, .h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 400; margin: 0; }
+h3, .h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 400; margin: 0; }
+h4, .h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); font-weight: 400; margin: 0; }
+h5, .h5 { font-size: var(--fs-h5); line-height: var(--lh-h5); font-weight: 400; margin: 0; }
+.p-lg { font-size: var(--fs-p-lg); line-height: var(--lh-p-lg); }
+.p-xs { font-size: var(--fs-p-xs); line-height: var(--lh-p-xs); }
+.medium, strong { font-weight: var(--weight-medium); }
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--fs-tag);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}
+
+/* ---- Layout ---- */
+.container { max-width: var(--container-wide); margin-inline: auto; padding-inline: var(--gutter); }
+.container--narrow { max-width: calc(var(--container-article) + 2 * var(--gutter)); }
+.section { padding-block: var(--section-padding); }
+@media (min-width: 1024px) { .section { padding-block: var(--space-20); } }
+.section--beige { background: var(--surface-muted); }
+.section--brand { background: var(--surface-brand); color: var(--text-inverse); }
+.section--dark { background: var(--surface-brand-dark); color: var(--text-inverse); }
+
+/* ---- Botones ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  font-family: var(--font-mono); font-size: var(--fs-button); line-height: 1.2;
+  letter-spacing: var(--tracking-mono); text-transform: uppercase; text-decoration: none;
+  padding: 15px 30px; min-height: 44px;
+  border-radius: var(--radius-sm); border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+              color var(--duration-fast) var(--ease-standard),
+              border-color var(--duration-fast) var(--ease-standard),
+              transform var(--duration-fast) var(--ease-standard);
+}
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.btn[disabled], .btn[aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+.btn--sm { padding: 10px 20px; min-height: 36px; font-size: var(--fs-button-sm); }
+
+.btn--primary { background: var(--entrix-sky-blue); border-color: var(--entrix-sky-blue); color: var(--entrix-white); }
+.btn--primary:hover { background: var(--entrix-energetic-blue); border-color: var(--entrix-energetic-blue); }
+.btn--primary:active { background: var(--entrix-deep-blue); border-color: var(--entrix-deep-blue); }
+
+.btn--secondary { background: transparent; border: 1px solid var(--entrix-sky-blue); color: var(--entrix-sky-blue); }
+.btn--secondary:hover { background: var(--entrix-light-blue); }
+.btn--secondary:active { background: var(--entrix-beige); color: var(--entrix-energetic-blue); }
+
+.btn--inverted { background: transparent; border: 1px solid var(--entrix-white); color: var(--entrix-white); }
+.btn--inverted:hover { background: var(--entrix-light-blue); color: var(--entrix-sky-blue); border-color: var(--entrix-light-blue); }
+
+.btn--text {
+  background: none; border: 0; padding-inline: 0; color: var(--entrix-sky-blue); position: relative;
+}
+.btn--text::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 1px; background: currentColor;
+  transform: scaleX(0); transform-origin: left; transition: transform var(--duration-menu) var(--ease-standard);
+}
+.btn--text:hover::after { transform: scaleX(1); }
+
+/* ---- Tag / eyebrow ---- */
+.tag {
+  display: inline-flex; align-items: center;
+  padding: 6px 14px; border-radius: var(--radius-sm);
+  background: var(--entrix-light-blue); color: var(--entrix-deep-blue);
+  font-family: var(--font-mono); font-size: var(--fs-tag); line-height: 20px;
+  letter-spacing: var(--tracking-mono); text-transform: uppercase;
+}
+/* Como el kicker de entrixenergy.com: fuente principal (no mono), 14px, mayúsculas, tracking 2px */
+.eyebrow {
+  font-family: var(--font-primary); font-size: var(--fs-eyebrow); line-height: 1.5;
+  letter-spacing: var(--tracking-mono); text-transform: uppercase; color: var(--entrix-sky-blue);
+}
+.section--brand .eyebrow, .section--dark .eyebrow { color: var(--entrix-light-blue); }
+
+/* ---- Cards ---- */
+.card {
+  background: var(--surface-muted); color: var(--text-brand);
+  border-radius: var(--radius-md); padding: var(--space-6);
+  display: flex; flex-direction: column; gap: var(--space-3);
+}
+@media (min-width: 1024px) { .card { padding: var(--space-8); } }
+.card--white { background: var(--surface-default); box-shadow: var(--shadow-card); }
+.card--brand { background: var(--surface-brand); color: var(--text-inverse); }
+
+/* ---- KPI / stat ---- */
+.stat { display: flex; flex-direction: column; gap: var(--space-2); }
+.stat__value { font-size: var(--fs-h2); line-height: 1; color: var(--entrix-deep-blue); }
+.stat__label { font-size: var(--fs-p); color: var(--text-secondary); }
+.section--brand .stat__value, .section--dark .stat__value { color: var(--entrix-white); }
+.section--brand .stat__label, .section--dark .stat__label { color: var(--entrix-light-blue); }
+
+/* ---- Speaker ---- */
+.speaker { display: flex; gap: var(--space-4); align-items: center; }
+.speaker__photo { width: 80px; height: 80px; border-radius: var(--radius-full); object-fit: cover; background: var(--entrix-light-blue); }
+.speaker__name { font-size: var(--fs-h5); line-height: 1.2; color: var(--entrix-deep-blue); }
+.speaker__role { font-size: var(--fs-p-xs); color: var(--text-secondary); }
+
+/* ---- Formularios ---- */
+.field { display: flex; flex-direction: column; gap: var(--space-1); }
+.field label { font-size: var(--fs-p-xs); color: var(--text-default); }
+.input {
+  font: inherit; font-size: 16px; min-height: 44px; padding: 12px 20px;
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);
+  background: var(--entrix-white); color: var(--text-default);
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+.input:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.input[aria-invalid="true"] { border-color: var(--entrix-error); }
+.field__error { font-size: var(--fs-p-xs); color: var(--entrix-error); }
+.checkbox { display: flex; gap: var(--space-2); align-items: flex-start; font-size: var(--fs-p-xs); }
+.checkbox input { width: 18px; height: 18px; accent-color: var(--entrix-sky-blue); margin-top: 3px; }
+
+/* ---- Logo wall ---- */
+.logo-wall { display: flex; flex-wrap: wrap; gap: var(--space-8) var(--space-10); align-items: center; }
+.logo-wall img { height: 32px; width: auto; }
+
+/* ---- Accordion (FAQ) ---- */
+.faq details { border-bottom: 1px solid var(--border-subtle); padding-block: var(--space-4); }
+.faq summary { cursor: pointer; font-size: var(--fs-h5); color: var(--entrix-deep-blue); list-style: none; display: flex; justify-content: space-between; gap: var(--space-4); }
+.faq summary::after { content: "+"; font-family: var(--font-mono); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: var(--space-3) 0 0; color: var(--text-secondary); }
+
+/* ---- Reveal ---- */
+@keyframes entrix-fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.reveal { animation: entrix-fade-in var(--duration-reveal) var(--ease-out) both; }
+
+@media (prefers-contrast: more) {
+  .btn:focus-visible, .input:focus-visible { outline-width: 3px; }
+  .tag { border: 1px solid var(--entrix-deep-blue); }
+}

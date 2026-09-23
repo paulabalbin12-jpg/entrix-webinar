@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">Beyond Revenue per MW · Entrix Webinar</title>
+  <meta name="description" content="Live webinar for BESS developers and asset owners on why revenue per MW alone is not enough to compare battery performance." data-i18n-attr="content:meta.description">
+  <!-- Página conceptual del case study: no indexar -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Beyond Revenue per MW · Entrix Webinar">
+  <meta property="og:description" content="Live webinar for BESS developers and asset owners. Wednesday, 18 November 2026 · 11:00 CET · Online.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 0 26.3 26'%3E%3Cpath fill='%2316265B' d='M24.267 13.367c-.19 6.416-5.354 11.578-11.77 11.767.192-6.365 5.342-11.498 11.77-11.767ZM11.676 25.132C5.299 24.895.183 19.742 0 13.353h11.676v11.779ZM11.772.867C11.578 7.232 6.429 12.367 0 12.636.19 6.219 5.354 1.056 11.771.867ZM12.486.867c6.39.183 11.542 5.299 11.779 11.676H12.486V.867Z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/content.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-logo" viewBox="0 0 116 26">
+      <path fill="currentColor" d="M24.267 13.367c-.19 6.416-5.354 11.578-11.77 11.767.192-6.365 5.342-11.498 11.77-11.767ZM11.676 25.132C5.299 24.895.183 19.742 0 13.353h11.676v11.779Zm40.686-20.03H40.134v6.119h10.655v3.037H40.134v6.312h12.448v3.037H36.278V2.064h16.084v3.038Zm39.358 5.923h-2.251c-2.77 0-3.982 1.39-3.982 4.309v8.273h-3.73V8.152h3.571v1.78h.253c.582-1.121 1.653-1.84 3.872-1.84h2.267v2.933Zm15.342 2.348h.25l4.36-5.22h3.777v.449l-5.995 7.18 5.729 7.376v.45h-3.84l-4.219-5.431h-.25l-4.532 5.43h-3.793v-.449l6.184-7.405-5.57-7.151v-.45h3.855l4.044 5.221Zm-43.56-5.55c3.84 0 6.201 1.87 6.201 5.67v10.112h-3.73v-9.8c0-2.139-1.212-3.14-3.415-3.14-2.408 0-4.313 1.301-4.313 4.293v8.647h-3.73V8.152h3.606v1.705h.251c1.117-1.45 2.928-2.034 5.13-2.034Zm11.867.33h4.595v2.737h-4.595v9.545l.253.238h4.266v2.933h-3.763c-2.817 0-4.484-1.378-4.484-4.01V8.152h-.002v-4.1h3.73v4.1Zm21.606 15.452h-3.73V8.152h3.73v15.454ZM11.772.867C11.578 7.232 6.429 12.367 0 12.636.19 6.219 5.354 1.056 11.771.867Zm.714 0c6.39.183 11.542 5.299 11.779 11.676H12.486V.867ZM97.101 5.85h-3.998V2.588h3.998V5.85Z"/>
+    </symbol>
+  </svg>
+
+  <a class="btn btn--primary btn--sm skip-link" href="#register" data-scroll-to-form data-i18n="skip">Skip to registration</a>
+
+  <!-- 0 · Nav -->
+  <header class="site-nav" data-nav>
+    <div class="container site-nav__inner">
+      <a class="site-nav__logo" href="#top" aria-label="Entrix">
+        <svg viewBox="0 0 116 26" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg>
+      </a>
+      <nav class="site-nav__links" aria-label="Page sections" data-i18n-attr="aria-label:nav.aria">
+        <a href="#why" data-i18n="nav.why">Why it matters</a>
+        <a href="#speakers" data-i18n="nav.speakers">Speakers</a>
+        <a href="#topics" data-i18n="nav.topics">Topics</a>
+        <a href="#agenda" data-i18n="nav.agenda">Agenda</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="site-nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.aria">
+          <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <button type="button" data-lang="de" lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
+        </div>
+        <a class="btn btn--primary btn--sm" href="#register" data-scroll-to-form data-i18n="nav.register">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 1 · Franja de imagen + countdown -->
+    <section class="event-strip" aria-labelledby="strip-date">
+      <div class="container">
+        <div class="event-strip__media">
+          <img class="event-strip__img" src="img/bess-optimised-by-entrix.webp" alt="" fetchpriority="high">
+          <div class="event-strip__top">
+            <span class="tag" data-i18n="strip.tag">Live webinar</span>
+            <span class="mono event-strip__facts" data-i18n="strip.facts">Free · Online · English</span>
+          </div>
+          <div class="event-strip__bottom">
+            <div>
+              <p class="event-strip__date" id="strip-date" data-i18n="strip.date">18 Nov 2026</p>
+              <p class="mono event-strip__time" data-i18n="strip.time">Wednesday · 11:00 to 12:00&nbsp;CET</p>
+            </div>
+            <div class="countdown" data-countdown role="timer" aria-live="off">
+              <p class="mono countdown__label" data-countdown-label data-i18n="countdown.label">Starts in</p>
+              <div class="countdown__units">
+                <div class="countdown__unit"><span class="countdown__value" data-unit="days">--</span><span class="mono countdown__name" data-i18n="countdown.days">Days</span></div>
+                <div class="countdown__unit"><span class="countdown__value" data-unit="hours">--</span><span class="mono countdown__name" data-i18n="countdown.hours">Hrs</span></div>
+                <div class="countdown__unit"><span class="countdown__value" data-unit="minutes">--</span><span class="mono countdown__name" data-i18n="countdown.minutes">Min</span></div>
+                <div class="countdown__unit"><span class="countdown__value" data-unit="seconds">--</span><span class="mono countdown__name" data-i18n="countdown.seconds">Sec</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · Intro + registro (la "landing page introduction" del brief) -->
+    <section class="section intro" id="overview">
+      <div class="container layout intro__layout">
+        <div class="intro__content span-7">
+          <p class="eyebrow" data-i18n="intro.eyebrow">Entrix webinar · BESS&nbsp;performance</p>
+          <h1 class="intro__title" data-i18n-html="intro.title"><span>Beyond Revenue per&nbsp;MW:</span> How to Compare Battery Performance More Meaningfully</h1>
+          <p class="p-lg intro__lead" data-i18n="intro.lead">Revenue per MW is a useful benchmark, but on its own it doesn't tell you everything about how a battery performs. Join an Entrix expert and an external industry expert to discuss what else to look at when you compare BESS performance, and what that means for your asset decisions.</p>
+          <dl class="event-facts">
+            <div><dt class="mono" data-i18n="facts.date.label">Date</dt><dd data-i18n="facts.date">Wednesday, 18 November 2026</dd></div>
+            <div><dt class="mono" data-i18n="facts.time.label">Time</dt><dd data-i18n="facts.time">11:00 to 12:00 CET</dd></div>
+            <div><dt class="mono" data-i18n="facts.format.label">Format</dt><dd data-i18n="facts.format">Online, in English</dd></div>
+            <div><dt class="mono" data-i18n="facts.audience.label">For</dt><dd data-i18n="facts.audience">BESS developers and asset owners</dd></div>
+          </dl>
+        </div>
+
+        <aside class="span-5 intro__aside">
+          <div class="register-card" id="register">
+            <div data-form-view>
+              <p class="eyebrow" data-i18n="form.eyebrow">Free registration</p>
+              <h2 class="h4 register-card__title" data-i18n="form.title">Save your seat</h2>
+              <form class="register-form" id="register-form" novalidate>
+                <div class="field">
+                  <label for="f-first-name" data-i18n="form.firstName">First name</label>
+                  <input class="input" id="f-first-name" name="firstName" type="text" autocomplete="given-name" required aria-describedby="f-first-name-error">
+                  <p class="field__error" id="f-first-name-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="f-email" data-i18n="form.email">Work email</label>
+                  <input class="input" id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-error">
+                  <p class="field__error" id="f-email-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="f-company" data-i18n="form.company">Company</label>
+                  <input class="input" id="f-company" name="company" type="text" autocomplete="organization" required aria-describedby="f-company-error">
+                  <p class="field__error" id="f-company-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="f-company-type" data-i18n="form.companyType">Company type</label>
+                  <select class="input" id="f-company-type" name="companyType" required aria-describedby="f-company-type-error">
+                    <option value="" data-i18n="form.select">Select…</option>
+                    <option value="developer" data-i18n="form.type.developer">BESS developer</option>
+                    <option value="asset-owner" data-i18n="form.type.owner">Asset owner</option>
+                    <option value="other" data-i18n="form.type.other">Other</option>
+                  </select>
+                  <p class="field__error" id="f-company-type-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="f-role" data-i18n="form.role">Role / function</label>
+                  <select class="input" id="f-role" name="role" required aria-describedby="f-role-error">
+                    <option value="" data-i18n="form.select">Select…</option>
+                    <option value="commercial" data-i18n="form.role.commercial">Commercial / business development</option>
+                    <option value="investment" data-i18n="form.role.investment">Investment / asset management</option>
+                    <option value="technical" data-i18n="form.role.technical">Technical / operations</option>
+                    <option value="other" data-i18n="form.role.other">Other</option>
+                  </select>
+                  <p class="field__error" id="f-role-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label class="checkbox">
+                    <input type="checkbox" id="f-privacy" name="privacy" required aria-describedby="f-privacy-error">
+                    <span data-i18n-html="form.privacy">I agree to the <a href="https://www.entrixenergy.com/en/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</span>
+                  </label>
+                  <p class="field__error" id="f-privacy-error" hidden></p>
+                </div>
+                <button class="btn btn--primary register-card__submit" type="submit"><span data-submit-label data-i18n="cta.register">Register for the webinar</span></button>
+                <p class="register-card__note" data-i18n="form.note">You'll get a confirmation email with the link to join and a calendar invite.</p>
+              </form>
+            </div>
+
+            <div class="register-card__success" data-success-view hidden>
+              <svg class="register-card__check" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M15 24.5l6 6 12-13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h2 class="h4" tabindex="-1" data-success-title data-i18n="success.title">You're registered</h2>
+              <p class="register-card__success-text" data-success-text></p>
+              <button class="btn btn--secondary" type="button" data-add-to-calendar data-i18n="success.calendar">Add to calendar</button>
+              <p class="mono register-card__demo" data-i18n="success.demo">Concept demo · no data was sent</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 3 · Why it matters -->
+    <section class="section section--beige" id="why">
+      <div class="container">
+        <div class="layout">
+          <div class="section-head span-7">
+            <p class="eyebrow" data-i18n="why.eyebrow">Why it matters</p>
+            <h2 data-i18n="why.title">What does revenue per MW really tell us about battery performance?</h2>
+            <p class="p-lg section-head__lead" data-i18n="why.lead">It's the number everyone quotes, and it makes batteries easy to rank. But the ranking doesn't explain why one battery earns more than another.</p>
+          </div>
+          <figure class="metric-card span-5" data-reveal>
+            <div class="metric-card__top">
+              <figcaption class="h5" data-i18n="why.chart.title">One number, only part of the picture</figcaption>
+              <span class="mono metric-card__note" data-i18n="why.chart.label">Illustrative</span>
+            </div>
+            <p class="metric-card__unit">k€/MW/a</p>
+            <div class="metric-bar" aria-hidden="true">
+              <div class="metric-bar__fill"></div>
+              <div class="metric-bar__context"><span>?</span><span>?</span><span>?</span></div>
+            </div>
+            <div class="metric-card__legend">
+              <span class="mono" data-i18n="why.chart.headline">The headline number</span>
+              <span class="mono" data-i18n="why.chart.context">What sits behind it</span>
+            </div>
+          </figure>
+        </div>
+
+        <div class="layout why__cards" data-reveal>
+          <article class="audience-card span-6">
+            <span class="tag" data-i18n="why.dev.tag">BESS developers</span>
+            <h3 class="h4" data-i18n="why.dev.title">Comparing projects</h3>
+            <p data-i18n="why.dev.text">Two projects can have similar expected revenue per MW on paper. Before you choose between them, you need to know what each number is based on.</p>
+          </article>
+          <article class="audience-card span-6">
+            <span class="tag" data-i18n="why.owner.tag">Asset owners</span>
+            <h3 class="h4" data-i18n="why.owner.title">Judging an operating asset</h3>
+            <p data-i18n="why.owner.text">A high revenue per MW looks like strong performance, and it may be. The figure alone can't confirm it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · Speakers -->
+    <section class="section" id="speakers">
+      <div class="container layout">
+        <div class="section-head section-head--sticky span-5">
+          <p class="eyebrow" data-i18n="speakers.eyebrow">Speakers</p>
+          <h2 data-i18n="speakers.title">Two perspectives on battery performance</h2>
+          <p class="section-head__lead" data-i18n="speakers.lead">One from inside Entrix, one from elsewhere in the industry.</p>
+        </div>
+        <div class="speakers-grid span-7" data-reveal>
+          <article class="speaker-card">
+            <img class="speaker-card__photo" src="img/speaker-entrix.jpg" width="800" height="680" alt="" loading="lazy" decoding="async">
+            <div class="speaker-card__body">
+              <span class="tag">Entrix</span>
+              <h3 class="h4">Lukas Brandt</h3>
+              <p class="speaker-card__role" data-i18n="speakers.entrix.role">Role to be announced</p>
+            </div>
+          </article>
+          <article class="speaker-card">
+            <img class="speaker-card__photo" src="img/speaker-guest.jpg" width="800" height="680" alt="" loading="lazy" decoding="async">
+            <div class="speaker-card__body">
+              <span class="tag" data-i18n="speakers.external.tag">Guest</span>
+              <h3 class="h4">Sofia Marchetti</h3>
+              <p class="speaker-card__role" data-i18n="speakers.external.role">Role and company to be announced</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · What you'll learn -->
+    <section class="section section--brand" id="topics">
+      <div class="container">
+        <div class="section-head topics__head">
+          <p class="eyebrow" data-i18n="learn.eyebrow">What you'll learn</p>
+          <h2 data-i18n="learn.title">Three questions we'll discuss</h2>
+        </div>
+        <ol class="topics-grid" data-reveal>
+          <li class="topic-card">
+            <span class="mono topic-card__num">01</span>
+            <div>
+              <h3 class="h4" data-i18n="learn.1.q">Is revenue per MW enough?</h3>
+              <p data-i18n="learn.1.text">When the metric is a fair basis for comparing two batteries, and when it isn't.</p>
+            </div>
+          </li>
+          <li class="topic-card">
+            <span class="mono topic-card__num">02</span>
+            <div>
+              <h3 class="h4" data-i18n="learn.2.q">What else belongs in the picture?</h3>
+              <p data-i18n="learn.2.text">The context you need next to revenue per MW to judge whether a battery is performing well.</p>
+            </div>
+          </li>
+          <li class="topic-card">
+            <span class="mono topic-card__num">03</span>
+            <div>
+              <h3 class="h4" data-i18n="learn.3.q">What changes for your decisions?</h3>
+              <p data-i18n="learn.3.text">How the answers affect the way you choose between projects or assess the assets you already run.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="topics__cta">
+          <a class="btn btn--primary" href="#register" data-scroll-to-form data-i18n="cta.register">Register for the webinar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · Agenda -->
+    <section class="section" id="agenda">
+      <div class="container layout">
+        <div class="section-head section-head--sticky span-4">
+          <p class="eyebrow" data-i18n="agenda.eyebrow">Agenda</p>
+          <h2 data-i18n="agenda.title">The session at a glance</h2>
+          <p class="mono agenda__note" data-i18n="agenda.note">Preliminary · all times CET</p>
+        </div>
+        <ol class="agenda span-8">
+          <li class="agenda__item" data-reveal>
+            <time class="mono agenda__time" datetime="2026-11-18T11:00+01:00">11:00</time>
+            <div class="agenda__body">
+              <h3 class="h5" data-i18n="agenda.1.title">Welcome and live poll</h3>
+              <p data-i18n="agenda.1.text">A short introduction and one question for you: how do you compare BESS performance today?</p>
+            </div>
+            <span class="tag tag--muted agenda__tag">Entrix</span>
+          </li>
+          <li class="agenda__item" data-reveal>
+            <time class="mono agenda__time" datetime="2026-11-18T11:05+01:00">11:05</time>
+            <div class="agenda__body">
+              <h3 class="h5" data-i18n="agenda.2.title">Why revenue per MW alone falls short</h3>
+              <p data-i18n="agenda.2.text">What the metric captures, and what it leaves open.</p>
+            </div>
+            <span class="tag tag--muted agenda__tag" data-i18n="agenda.2.tag">Entrix expert</span>
+          </li>
+          <li class="agenda__item" data-reveal>
+            <time class="mono agenda__time" datetime="2026-11-18T11:25+01:00">11:25</time>
+            <div class="agenda__body">
+              <h3 class="h5" data-i18n="agenda.3.title">Expert discussion</h3>
+              <p data-i18n="agenda.3.text">How to compare battery performance in practice.</p>
+            </div>
+            <span class="tag tag--muted agenda__tag" data-i18n="agenda.both">Both speakers</span>
+          </li>
+          <li class="agenda__item" data-reveal>
+            <time class="mono agenda__time" datetime="2026-11-18T11:45+01:00">11:45</time>
+            <div class="agenda__body">
+              <h3 class="h5" data-i18n="agenda.4.title">Live Q&amp;A</h3>
+              <p data-i18n="agenda.4.text">Your questions for the speakers, then how the ideas apply to your own project.</p>
+            </div>
+            <span class="tag tag--muted agenda__tag" data-i18n="agenda.both">Both speakers</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 7 · FAQ -->
+    <section class="section section--beige" id="faq">
+      <div class="container layout">
+        <div class="section-head section-head--sticky span-4">
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 data-i18n="faq.title">Good to know</h2>
+        </div>
+        <div class="faq span-8">
+          <details>
+            <summary data-i18n="faq.1.q">Is the webinar free?</summary>
+            <p data-i18n="faq.1.a">Yes. You only need to register.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.2.q">Will there be a recording?</summary>
+            <p data-i18n="faq.2.a">Yes. We'll send the recording and the key takeaways to everyone who registers, whether or not they join live.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.3.q">What language is the webinar in?</summary>
+            <p data-i18n="faq.3.a">English.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.4.q">How do I join?</summary>
+            <p data-i18n="faq.4.a">Register on this page, then use the link in your confirmation email to join on the day.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.5.q">Can I ask questions?</summary>
+            <p data-i18n="faq.5.a">Yes. You can send them in at any point during the session, and the speakers will go through them in the live Q&amp;A at the end.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.6.q">Who is the webinar for?</summary>
+            <p data-i18n="faq.6.a">BESS developers and asset owners, especially people in commercial, investment, asset management and business development roles.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · Register for free + 9 · Contacto -->
+    <section class="section" id="join">
+      <div class="container">
+        <div class="cta-module section--brand" data-reveal>
+          <div class="cta-module__text">
+            <p class="eyebrow" data-i18n="form.eyebrow">Free registration</p>
+            <h2 data-i18n="cta.title">Look beyond the headline number</h2>
+            <p class="p-lg cta-module__lead" data-i18n="cta.text">Find out what sits behind revenue per MW before your next asset decision.</p>
+          </div>
+          <div class="cta-module__action">
+            <p class="mono cta-module__meta" data-i18n="cta.meta">Wed · 18 Nov 2026 · 11:00 CET · Online</p>
+            <a class="btn btn--primary" href="#register" data-scroll-to-form data-i18n="cta.register">Register for the webinar</a>
+          </div>
+        </div>
+
+        <div class="contact-card" data-reveal>
+          <img class="contact-card__avatar" src="img/contact.jpg" width="240" height="240" alt="" loading="lazy" decoding="async">
+          <div class="contact-card__text">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Questions about the webinar?</p>
+            <p class="h5 contact-card__name">Amara Schulz</p>
+            <p class="p-xs contact-card__role">Marketing · Entrix</p>
+            <p class="contact-card__lead" data-i18n="contact.text">Write to us if you need help registering or want to know more about the session.</p>
+          </div>
+          <a class="btn btn--secondary" href="https://www.entrixenergy.com/en/entrix-contact" target="_blank" rel="noopener" data-i18n="contact.button">Send a message</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10 · Footer -->
+  <footer class="site-footer section--dark">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="site-footer__logo" href="https://www.entrixenergy.com/en" aria-label="Entrix">
+          <svg viewBox="0 0 116 26" aria-hidden="true" focusable="false"><use href="#i-logo"/></svg>
+        </a>
+        <nav class="site-footer__links" aria-label="Legal" data-i18n-attr="aria-label:footer.aria">
+          <a href="https://www.entrixenergy.com/en/privacy-policy" target="_blank" rel="noopener" data-i18n="footer.privacy">Privacy policy</a>
+          <a href="https://www.entrixenergy.com/en/imprint" target="_blank" rel="noopener" data-i18n="footer.imprint">Imprint</a>
+          <a href="https://www.entrixenergy.com/en" target="_blank" rel="noopener">entrixenergy.com</a>
+        </nav>
+      </div>
+      <p class="p-xs site-footer__disclaimer" data-i18n="footer.disclaimer">Concept page created for the Entrix marketing case study. This is not an official Entrix page, and the registration form does not send any data.</p>
+    </div>
+  </footer>
+</body>
+</html>
